@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+    width: 900;
+    margin: 0 auto;
+}
+header{
+    background-color: black;
+    width: 100%;
+    clear: both;
+    content: '';
+    display: table;
+}
+nav {
+    float: right;
+}
+nav ul li{
+   list-style: none;
+   margin-left:  20px;
+   float: left;
+   padding: 30px 0;
+}
+nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
