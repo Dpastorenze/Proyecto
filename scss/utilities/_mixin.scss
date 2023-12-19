@@ -1,0 +1,11 @@
+@mixin medidas ($width,$height){
+    width:$width;
+    height: $height;
+    object-fit: cover;
+}
+@mixin flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
