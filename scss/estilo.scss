@@ -1,5 +1,11 @@
 @import "utilities/variables";
 @import "utilities/mixin";
+//'Open Sans', sans-serif'Roboto', sans-serif
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&display=swap');
+//'Open Sans', sans-serif;'Roboto', sans-serif;'Ubuntu', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,400&family=Ubuntu&display=swap');
+
+
 // selector universal con el "*" //
 
 * {
@@ -46,6 +52,8 @@ nav ul li a {
     text-decoration: none;
     color: $color-uno;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -53,7 +61,6 @@ h1 {
     color: $color-uno;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .vinculos ul li :hover {
@@ -67,14 +74,28 @@ h1 {
     height: 150px;
     border: $color-uno solid 2px;
     font-size: 25px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .info {
     margin: $medida-espacios;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
-
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+.col-8 .scrollspy-example ul li{
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
 /* aplicando mediaquery screen tomando nota de las medidas estandares */
 /* phone 320x480 desktop 1680x1050 tablet 1024x768*/
 /* mobile */
@@ -160,6 +181,9 @@ h1 {
         color: $color-dos;
         border-bottom: 2px white solid;
     }
+    .col-8 .scrollspy-example ul {
+        color:$color-dos
+    }
 
     .title-somos {
         font-size: 100px;
@@ -198,7 +222,13 @@ h1 {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
     }
-
+    //contenedor para texto seguido a vinculos
+    .contenedor{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+       }
     .multimedia {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -271,6 +301,9 @@ h1 {
         font-family: Arial, Helvetica, sans-serif;
         background-color: $color-uno;
     }
+    .col-8 .scrollspy-example ul {
+        color:$color-dos
+    }
 
     /* grupo indice */
     .row {
@@ -288,12 +321,31 @@ h1 {
 
 /* desktop */
 @media screen and (min-width: 1024px) {
-
+    //contenedor para texto seguido a vinculos
+    .contenedor{
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 20px;
+       }
     /* se generan clases para page con bts modificando color fondo y texto  */
     .bg-titulo {
         color: $color-uno;
     }
 
+    .detalles img{
+        width: 250px;
+        height: 200px;
+        float: left;
+      
+    }
+    .detalles p {
+        font-size: 25px;
+        background-color: $color-uno;
+        color: whitesmoke;
+        margin: 0 0 0 10px;
+        
+    }
     .multimedia {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -365,7 +417,6 @@ h1 {
     }
 }
 
-
 /* segmento contacto */
 .contact {
     min-height: 35vh;
@@ -408,13 +459,6 @@ h1 {
 
 }
 
-/* hasta aca estilos para segmento contacto */
-/* usado para generar class detalles en p */
-.detalles p {
-    font-size: 25px;
-    background-color: $color-uno;
-    color: whitesmoke;
-}
 
 /* footer (los iconos son traidos desde bootstrap icons) */
 .redsocial {
@@ -444,3 +488,4 @@ footer p {
     padding: $medida-espacios;
     color: $color-tres;
 }
+
