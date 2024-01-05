@@ -15,16 +15,21 @@
 }
 
 .menu {
-    width: 900;
+    width: 100%;
     margin: 0 auto;
+    background-color: black;
 }
 
+/* se agrega nav sticky */
 header {
     background-color: black;
     width: 100%;
     clear: both;
     content: '';
     display: table;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 nav {
@@ -36,6 +41,7 @@ nav {
     width: 85px;
     height: 85px;
     border-radius: 25px;
+    
 }
 
 /*margen y espacio del menu nav */
@@ -57,14 +63,16 @@ nav ul li a {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 50px;
     color: $color-uno;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .vinculos ul li :hover {
     font-size: 30px;
+    color: white;
 }
 
 .vinculos {
@@ -86,22 +94,57 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
-p{
+
+p {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
-.col-8 .scrollspy-example ul li{
+
+.col-8 .scrollspy-example ul li {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Ubuntu', sans-serif;
 }
+
 /* aplicando mediaquery screen tomando nota de las medidas estandares */
 /* phone 320x480 desktop 1680x1050 tablet 1024x768*/
 /* mobile */
 @media screen and (max-width: 600px) {
     body {
         background-color: $color-uno
+    }
+
+    .menu img {
+        width: 40px;
+        height: 40px;
+        border-radius: 25px;
+        float: left;
+    }
+
+    nav {
+        float: right;
+
+    }  
+    nav ul{
+   margin-right: 0;
+        float: right;
+        padding: 0;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin-left: 10px;
+        padding: 10px 0;
+        
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: $color-uno;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Roboto', sans-serif;
     }
 
     /* clase para bts */
@@ -111,7 +154,7 @@ p{
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 50px;
         color: $color-dos;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
@@ -181,8 +224,9 @@ p{
         color: $color-dos;
         border-bottom: 2px white solid;
     }
+
     .col-8 .scrollspy-example ul {
-        color:$color-dos
+        color: $color-dos
     }
 
     .title-somos {
@@ -217,18 +261,20 @@ p{
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 50px;
         color: $color-dos;
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
     }
+
     //contenedor para texto seguido a vinculos
-    .contenedor{
+    .contenedor {
         display: flex;
         margin: 0;
         padding: 0;
         gap: 20px;
-       }
+    }
+
     .multimedia {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -301,8 +347,9 @@ p{
         font-family: Arial, Helvetica, sans-serif;
         background-color: $color-uno;
     }
+
     .col-8 .scrollspy-example ul {
-        color:$color-dos
+        color: $color-dos
     }
 
     /* grupo indice */
@@ -321,31 +368,35 @@ p{
 
 /* desktop */
 @media screen and (min-width: 1024px) {
+
     //contenedor para texto seguido a vinculos
-    .contenedor{
+    .contenedor {
         display: flex;
         margin: 0;
         padding: 0;
         gap: 20px;
-       }
+    }
+
     /* se generan clases para page con bts modificando color fondo y texto  */
     .bg-titulo {
         color: $color-uno;
     }
 
-    .detalles img{
+    .detalles img {
         width: 250px;
         height: 200px;
         float: left;
-      
+
     }
+
     .detalles p {
         font-size: 25px;
         background-color: $color-uno;
         color: whitesmoke;
         margin: 0 0 0 10px;
-        
+
     }
+
     .multimedia {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -488,4 +539,3 @@ footer p {
     padding: $medida-espacios;
     color: $color-tres;
 }
-

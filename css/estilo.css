@@ -6,15 +6,20 @@
   box-sizing: border-box; }
 
 .menu {
-  width: 900;
-  margin: 0 auto; }
+  width: 100%;
+  margin: 0 auto;
+  background-color: black; }
 
+/* se agrega nav sticky */
 header {
   background-color: black;
   width: 100%;
   clear: both;
   content: '';
-  display: table; }
+  display: table;
+  position: sticky;
+  top: 0;
+  z-index: 2; }
 
 nav {
   float: right;
@@ -42,13 +47,14 @@ nav ul li a {
   font-family: 'Roboto', sans-serif; }
 
 h1 {
-  font-size: 60px;
+  font-size: 50px;
   color: blue;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif; }
 
 .vinculos ul li :hover {
-  font-size: 30px; }
+  font-size: 30px;
+  color: white; }
 
 .vinculos {
   display: flex;
@@ -84,12 +90,33 @@ p {
 @media screen and (max-width: 600px) {
   body {
     background-color: blue; }
+  .menu img {
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+    float: left; }
+  nav {
+    float: right; }
+  nav ul {
+    margin-right: 0;
+    float: right;
+    padding: 0; }
+  nav ul li {
+    list-style: none;
+    margin-left: 10px;
+    padding: 10px 0; }
+  nav ul li a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif; }
   /* clase para bts */
   .bg-titulo {
     background-color: blue;
     color: white; }
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif; }
@@ -160,7 +187,7 @@ p {
     background-color: blue;
     color: white; }
   h1 {
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif; }
