@@ -347,7 +347,10 @@ ul li {
     font-size: 25px;
     background-color: blue;
     color: whitesmoke;
-    margin: 0 0 0 10px; }
+    margin: 0 0 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif; }
   .multimedia {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
